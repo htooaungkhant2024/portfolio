@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Network Project Showcase (BCIT)</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Campus Network Project Showcase</h1>
+    </header>
+    <main>
+        <section class="network-topology">
+            <h2>Network Topology</h2>
+            <img src="images/campus project.webp" alt="Network Topology Diagram">
+        </section>
+        <br>
+        <section class="section">
+            <h2>Introduction</h2>
+                <p>Our team is committed in providing quality network solutions for customer
+                    satisfaction. With this in mind, we intend to provide:
+                    <ul>
+                        <li>A high-availability network with redundancy and failover services for hosts.</li>
+                        <li>Centrally logged Cisco equipment output and synchronized time on network devices.</li>
+                        <li>Security features for maximum security against network attacks. </li>
+                        <li>Linux servers with incremental backup and Cisco router and switch services. </li>
+                        <li>Active Directory domain structure that centralizes all users and computers for network management.</li>
+                    </ul>
+                </p>
+            <h2>Skill Requirements: </h2>
+                <ul>
+                    <li>Experience configuration Cisco networking devices</li>
+                    <li>Configuring access control list</li>
+                    <li>Implementing Layer2 security features and end point security and Pentesting</li>
+                    <li>Creating web server</li>
+                    <li>Performing security assessments</li>
+                </ul>
+            <h2>Hardware</h2>
+            <div class="image-container">
+                <img src="images/hardware1.png" alt="Image 1">
+                <img src="images/hardware2.png" alt="Image 2">
+            </div>
+            <br>
+            <h2>Network Security Implementing</h2>
+            <p> In this project,  I took a responsibility to protect from network attack. The fundamental of our solution is out network that is comprised of the access, distribution, and core layer. 
+                With the use of Cisco routers and switches, we have chosen to implement advanced protocols. The following table lists protocols that have implemented on the Cisco networking devices in order to
+                protect the network against man-in-the-middle attacks and to control how traffic is transmitted and received
+                within the network:
+            </p>
+            <div>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Function</th>
+                    </tr>
+                    <tr>
+                        <td>HSRP</td>
+                        <td>HSRP avoids administrative and processing
+                            overhead and security issues so that there are
+                            failover services for the following hosts.</td>
+                    </tr>
+                    <tr><td>DHCP</td>
+                        <td>Snooping enabled on every VLAN and every switch
+                            so that inbound traffic. This determines which traffic
+                            is trusted or untrusted.
+                            Network security is attained by ensuring that traffic
+                            that is untrusted is dropped by layer 2 security
+                            technology.
+                        </td>
+                    </tr>
+                    <tr><td>STP Attack</td>
+                        <td>All ports that are connected to end devices have
+                            PortFast BPDU enabled so that loops are prevented.
+                            BPDUs will not be received on PortFast-enabled
+                            switch ports to avoid potential spanning tree loops.
+                        </td>
+                    </tr>
+                    <tr><td>Port Security</td>
+                        <td>1. To block unwanted traffic from attempting to
+                            access ports, the allocated maximum number of
+                            ports is set to 1 so that any devices that attempt
+                            to access the network.
+                             2. Once a security violation has occurred the ports
+                            have been configured to enter shutdown mode.
+                             3. For the ports to retain MAC address information,
+                            switches with a sticky mac address enabled then
+                            dynamically learn and save MAC addresses.</td>
+                    </tr>    
+                </table>
+                <br>
+                <h2>Nessus Scanning</h2>
+                <p>To ensure that all security measure are to proper standard we used Nessus Vulnerability Scanner to
+                    evaluate the security of the network. We've performed penetration testing on the network the ensure that it
+                    is safe from malicious attacks. The examination of ports is done so that hackers can't exploit these ports
+                    and launch attacks that can be damaging to the network. This scan displays vulnerabilities that were found
+                    throughout the network and with these results we then applied the corresponding solutions.
+                    The first scan this procedure is launching a host discovery that displays full qualified domain name (FQDN),
+                    along with other details such as IP address and open ports. Upon discovery of the network, we then
+                    proceeded with the vulnerability scan.</p>
+                <section class="network-topology">
+                <img src="images/nessus.png" alt="nessus">
+                <br>
+                </section>
+                <br>
+                <table>
+                    <tr>
+                        <th>Vulnerability</th>
+                        <th>Description</th>
+                        <th>Solution</th>
+                    </tr>
+                    <tr>
+                        <td>1. Critical - Telnet Vulnerability
+                            Affecting Cisco Products</td>
+                        <td>The Cisco IOS Xe Software is
+                            compromised if the feature of
+                            persistent Telnet is enabled.</td>
+                        <td>Cisco bug ID CSCvu66723.
+                            Persistent Telnet feature shoud
+                            be disabled. </td>
+                    </tr>
+                    <tr><td>2. Critical - Cisco IOS XE
+                        Software NETCONF
+                        RESTCONF
+                        </td>
+                        <td>A bypass vulnerability makes
+                            the authentication process
+                            weak because it could allow
+                            attackers to bypass Cisco IOS
+                            Xe Software. 
+                            ▪ Attackers could bypass
+                            authentication such
+                            NETCONF and
+                            RESCONF
+                        </td>
+                        <td>Cisco bug ID CSCvt53563
+                            Upgrade the version of this ID</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <h2>Linux Firewall Configuring</h2>
+            <p> I configure firewalls in Linux using tools like ufw for 
+                simplicity or iptables for more advanced configurations. 
+                I enable the firewall, allow essential connections like SSH or HTTP, 
+                set default policies for incoming and outgoing traffic, and ensure rules 
+                align with security requirements. I verify configurations with ufw status and make adjustments as needed. 
+                I prioritize security while ensuring necessary services remain accessible, contributing to robust network 
+                defense strategies.
+            </p>
+            <br>
+            <h2>Window Policy Configuring</h2>
+            <p>In a Windows environment, end user policy outlines user responsibilities and behavior expectations, 
+                while password policy defines requirements for creating and managing passwords,
+                aiming to enhance security. Group Policy enables administrators to centrally manage
+                 settings across a network, enforcing security policies, standardizing configurations, 
+                 and ensuring compliance. These policies collectively contribute to maintaining security,
+                  integrity, and compliance within Windows environments.</p>
+                <!-- Add more skills as needed -->
+    </main>
+</body>
+</html>

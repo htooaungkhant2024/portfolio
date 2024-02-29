@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firewall Setup for Network Security Showcase</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Firewall Setup Showcase</h1>
+    </header>
+    <main>
+        <section class="network-topology">
+            <h2>Network Topology</h2>
+            <img src="images/firewall.png" alt="Network Topology Diagram">
+        </section>
+        <br>
+        <section class="section">
+            <h2>Subinterfaces and Vlans Configure on Switch1</h2>
+            <ul>
+                <li>Configure sub interfaces for vlan 10 adn vlan 20</li>
+                <li>Separate the traffic in switch</li>
+                <!-- Add more skills as needed -->
+            </ul>
+            <h2>Configure a site to site VPN between two Palo Alto devices</h2>
+            <ul>
+                <li>Create Tunnel.1 and use default router that put in VPN zone</li>
+                <li>Use default IKE Crypto</li>
+                <li>Use default IPSec Crypot</li>
+                <li>Use default IKE Gateways</li>
+                <li>allow the traffic from Trust to VPN and from VPN to Trust zone</li>
+            </ul>
+            <h2>Configure a site to site VPN between Palo Alto and Cisco and Fortigate</h2>
+            <ul>
+                <li>Create a tunnel in Cisco router</li>
+                <li>Create a tunnel in Fortigate</li>
+                <li>Create new tunnels in Palo Alto which is connected to Cisco router and Fortigate</li>
+            </ul>
+            <h2>Create Policy to Get Internet Access from Vlans</h2>
+            <ul>
+                <li>Allows the traffic from Trust Zone to VPN Zone and vice versa</li>
+                <li>Allows the ping access for Vlan 10 </li>
+                <li>Allows the webpage access for Vlan 20</li>
+            </ul>
+    </main>
+    
+</body>
+</html>

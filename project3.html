@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD Home Lab Set-Up for Hacking Showcase</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>AD Home Lab Set-Up for Hacking Showcase</h1>
+    </header>
+    <main>
+        <section class="network-topology">
+            <h2>Network Topology</h2>
+            <img src="images/ADsetup.png" alt="Network Topology Diagram">
+        </section>
+        <br>
+        <section class="section">
+            <h2>Overview</h2>
+            <p>In my AD hacking lab, I have 3 zones which are internal infrastructrue system (internal - 10.10.1.0/24), External (192.168.100.0/24)
+                and VPN (Openvpn connection - 172.17.11.0/24) that is connected to Tester System. I will show my detail implemention below. 
+            </p>
+            <h2>Requirements</h2>
+            <ul>
+                <li>VPN Server in Ubuntu Server or Client</li>
+                <li>Windows 10 Pro for Client01 to 03</li>
+                <li>SRVDC01 is a Windows Server 2019.</li>
+                <li>Kali linux for Testing the whole system and network</li>
+            </ul>
+            <h2>SRVDC01 Set-Up</h2>
+            <ul>
+                <li>Set up Active Directory Domain Services on a Windows Server 2016 or 2019.</li>
+                <li>Define the domain name as bcit.lab during the promotion process</li>
+                <li>Join client01 and 02 machines to the domain</li>
+                <li>Create user accounts and groups in Active Directory Users and Computers.</li>
+                <li>Configure password policies like complexity and expiration through Group Policy.</li>
+                <li>Use Group Policy Objects to enforce security settings and configurations.</li>
+                <li>Delegate specific permissions to users or groups as needed</li>
+                <!-- Add more skills as needed -->
+            </ul>
+            <h2>Client01 Set-Up</h2>
+            <ul>
+                <li>Install Windows 10 Pro</li>
+                <li>Memory 2 GB minimum / Processor 2 / Hard Disk 60 GB</li>
+                <li>Add 2 NAC one for internal and another for external</li>
+                <li>Check the virus and thread producation and turn it on and dismiss all if needs.</li>
+                <li>Add low level privillege user in my Client01 and logon as auto</li> 
+                <li>Install Remote Mouse 3.008 - Arbitrary Remote Command Execution for exploit low level accont</li>
+                <li>Install Wise Care 365 5.6.7.568 - 'WiseBootAssistant' Unquoted Service Path for privilege escalation of Client01 Admin access.</li>
+                <li>Install XAMPP server to see the default web page of client01</li>
+                <!-- Add more skills as needed -->
+            </ul>
+            <h2>Client02 Set-Up</h2>
+            <ul>
+                <li>Install Windows 10 Pro</li>
+                <li>Memory 2 GB minimum / Processor 2 / Hard Disk 60 GB</li>
+                <li>Add NAC for internal connection</li>
+                <li>Check the virus and thread producation and turn it on and dismiss all if needs.</li>
+                <li>Add low level privillege user in my Client02 and logon as auto</li> 
+                <li>Install Anviz CrossChex - Buffer Overflow (Metasploit)</li>
+                <li>Install Microsoft Windows Kerberos - Privilege Escalation (MS14-068)</li>
+                <!-- Add more skills as needed -->
+            </ul>
+            <h2>Client03 Set-Up</h2>
+            <ul>
+                <li>Install Windows 10 Pro</li>
+                <li>Memory 2 GB minimum / Processor 2 / Hard Disk 60 GB</li>
+                <li>Add NAC for internal and directlly connected to SRVDC01</li>
+                <li>Check the virus and thread producation and turn it on and dismiss all if needs.</li>
+                <li>this time login as service level account in this machine</li> 
+                <!-- Add more skills as needed -->
+            </ul>
+            <h2>OpenVPN Server Set-Up</h2>
+            <ul>
+                <li>Install Ubuntu Server or Client </li>
+                <li>Memory 2 GB minimum / Processor 2 / Hard Disk 60 GB</li>
+                <li>Add 2 NAC for internet access and directlly connected to External network</li>
+                <li>Access Server Portal openvpn.com </li>
+                <li>Connect openvpn from kali machine</li> 
+                <!-- Add more skills as needed -->
+            </ul>
+            <br>
+            <section class="network-topology">
+                <h2>Ready for Happy Hacking</h2>
+                <img src="images/OIP.jpg" alt="Network Topology Diagram">
+            </section>
+    </main>
+</body>
+</html>
